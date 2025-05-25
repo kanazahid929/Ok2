@@ -48,7 +48,7 @@ module.exports.run = async function({ api, event, Users }) {
   if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     //api.changeNickname(`𝗕𝗢𝗧 ${(!global.config.BOTNAME) ? "Buddy" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 
-    let gifUrl = 'https://i.postimg.cc/SNQXkB0y/lv-0-20231018174834.gif';
+    let gifUrl = 'https://i.imgur.com/UHAhbWP.jpeg';
 let gifPath = __dirname + '/Nayan/join/join.gif';
 
 axios.get(gifUrl, { responseType: 'arraybuffer' })
@@ -56,7 +56,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
     fs.writeFileSync(gifPath, response.data);
   if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     api.changeNickname(`[ ${global.config.PREFIX} ] • ➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-    return api.sendMessage("চলে এসেছি আমি পিচ্চি নয়ন তোমাদের মাঝে🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
+    return api.sendMessage("𝑨𝑳𝑨𝑹𝑻⚠️𝑪𝒀𝑩𝑬𝑹-𝑪𝑬𝑶_𝑺𝑬𝒀𝑨𝑴 𝑯𝑬𝑹𝑬 ⁹²⚠️😈!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
 <------------------------------>  
 BOT CONNECTED SUCCESFUL !!! 
 
@@ -66,15 +66,15 @@ APPROVAL ALLOW IN THIS GROUP!!!
 <------------------------------>
 AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 
 
-DEVELOPER :Mohammad Nayan 
+DEVELOPER :𝘾𝙀𝙊 𝙎𝙀𝙔𝘼𝙈
 
 🟣Facebook Account Link: 
 
-https://www.facebook.com/www.xnxx.com169
+https://www.𝘾𝙔𝘽𝙀𝙍.𝙃𝘿.....
 
-🔵WHATSAPP NUMBER: wa.me/+8801615298449
+🔵WHATSAPP NUMBER: 014......𝙚𝙧𝙤𝙤𝙧
 
-🟢SUPPORT EMAIL: www.mdmnnm2004@gmail.com`, attachment: fs.createReadStream(gifPath)}, threadID));
+🟢SUPPORT EMAIL : 𝙝𝙖𝙠3𝙧872@𝙜𝙢𝙞𝙡.𝙘𝙤𝙢`, attachment: fs.createReadStream(gifPath)}, threadID));
   }})
 .catch(error => {
     console.error(error);
@@ -112,19 +112,7 @@ https://www.facebook.com/www.xnxx.com169
           'https://i.imgur.com/V5L9dPi.jpeg',
           'https://i.imgur.com/M7HEAMA.jpeg'
         ]
-        let background = await new Promise((resolve, reject) => {
-          request.get(
-            encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`),
-            { encoding: null },
-            (error, response, body) => {
-              if (error) {
-                reject(error);
-              } else {
-                resolve(body);
-              }
-            }
-          );
-        });
+        let background = (await axios.get(encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`), { responseType: "arraybuffer", })).data;
         fs.writeFileSync(pathAva, Buffer.from(avtAnime, "utf-8"));
         fs.writeFileSync(pathImg, Buffer.from(background, "utf-8"));
         var avatar = await this.circle(pathAva);
@@ -175,7 +163,34 @@ https://www.facebook.com/www.xnxx.com169
         abx.push(fs.createReadStream(__dirname + `/Nayan/join/${o}.png`))
       }
       memLength.sort((a, b) => a - b);
-      (typeof threadData.customJoin == "undefined") ? msg = `Hello {name}\nWelcome to {threadName}\nyou're the {soThanhVien}th member on this group please enjoy"\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
+      (typeof threadData.customJoin == "undefined") ? msg = `.╔════•|      ✿      |•════╗
+ 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐
+╚════•|      ✿      |•════╝
+
+
+{name}\n✨🆆🅴🅻🅻 🅲🅾🅼🅴✨  
+           
+           ❥𝐍𝐄𝐖
+
+        🇲‌🇪‌🇲‌🇧‌🇪‌🇷
+
+        
+        
+      {threadName}\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien}༄ নঁং মে্ঁম্বা্ঁরঁ🌻🍂 ࿐
+      
+      🖤🌸আমাদের প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀
+
+        🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀
+         
+         
+         
+ ╔╦══• 🌻🍂 •✠•❀•✠ •   •══╦╗
+   💥🔥𝐁𝐎𝐓'𝐬 𝐎𝐖𝐍𝐄𝐑💥🔥
+
+                           ☟                     
+
+    🍂🌻𝑪𝑬𝑶-_𝑺𝑬𝒀𝑨𝑴🌻😽 
+╚╩══•    •✠•❀•✠ •    •══╩╝ "\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
       var nameAuthor = await Users.getNameUser(event.author)
       msg = msg
         .replace(/\{iduser}/g, iduser.join(', '))
