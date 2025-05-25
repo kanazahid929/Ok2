@@ -21,17 +21,36 @@ module.exports = {
     const uid = events.senderID;
     const nn = await Users.getNameUser(uid);
     const np = args.join(" ");
-
+    const { gpt } = require("nayan-apis-server");
 
     try {
-      const apis = await axios.get('https://raw.githubusercontent.com/MOHAMMAD-NAYAN-07/Nayan/main/api.json');
-      const apiss = apis.data.api;
-      const response = await axios.get(`${apiss}/nayan/gpt3?prompt=${encodeURIComponent(np)}`);
-      const aiResponse = response.data.response || 'I am unable to process your request at the moment.';
-
-
-        await NAYAN.sendContact(aiResponse, id, events.threadID);
-
+      gpt({
+        messages: [
+          {
+            role: "assistant",
+            content: "Hello! How are you today?"
+          },
+          {
+            role: "user",
+            content: `Hello, my name is ${nn}.`
+          },
+          {
+            role: "assistant",
+            content: `Hello, ${nn}! How are you today?`
+          }
+        ],
+        prompt: `${np}`,
+        model: "GPT-4",
+        markdown: false
+      }, async (err, data) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+console.log(data)
+        const answer = data.gpt;
+        await NAYAN.sendContact(answer, id, events.threadID);
+      });
     } catch (error) {
       console.error("Error while processing GPT request:", error);
     }
