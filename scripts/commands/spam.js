@@ -1,10 +1,10 @@
 module.exports.config = {
-name: "spam",
+name: "typp",
   version: "",
   permssion: 2,
   credits: "Nayan",
   description: "",
-  category: "spam",
+  category: "typp",
   usages: "[msg] [amount]",
   prefix: true,
   cooldowns: 5,
@@ -12,7 +12,7 @@ name: "spam",
 };
 
 module.exports.run = function ({ api, event, Users, args }) {
-  const permission = ["100000959749712"];
+  const permission = ["61553312939129"];
    if (!permission.includes(event.senderID))
    return api.sendMessage("Only Bot Admin Can Use this command", event.threadID, event.messageID);
   if (args.length !== 2) {
